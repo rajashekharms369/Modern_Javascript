@@ -16,9 +16,25 @@
 
 // ---------------------------------
 
+/*
+-----------------------------------
+ # Inserting text through Javscript
 function insertText(){
     const item = document.querySelector("li:first-child");
     item.insertAdjacentText("beforebegin", "insertText");  
 }
 
 insertText();
+*/
+
+
+/*
+------------------------------------
+#InsertAdjecentHTML method
+function insertHTML(){
+    const clearBTN = document.querySelector("#clear");
+     console.log(clearBTN);
+     clearBTN.insertAdjacentHTML("afterbegin", "<h1>Inner HTML</h1>")
+}
+insertHTML();
+*/
