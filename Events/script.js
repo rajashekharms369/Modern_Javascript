@@ -53,6 +53,10 @@ logo.addEventListener("mouseenter", onMouseEnter);
 
 */
 
+
+
+
+/* 
 const logo = document.querySelector("img");
 
 function onClick(e){
@@ -66,3 +70,32 @@ document.addEventListener("click", function(e){
     e.preventDefault();
     console.log("A link was clicked");
 })
+*/
+
+
+/* KeyBoard Events 
+const itemInput =  document.getElementById("item-input");
+
+const onKeyPress = (e) => {
+    console.log("keypress")
+}
+
+const onKeyDown = (e) => {
+    if(e.key == " "){
+        alert("You pressed SpaceBar");
+    }
+    console.log("Key pressed Down");
+}
+
+const onKeyUp = (e) => {
+    console.log("Key pressed up");
+}
+
+
+
+document.addEventListener("keypress", onKeyPress);
+
+document.addEventListener("keydown", onKeyDown);
+
+document.addEventListener("keyup", onKeyUp);
+*/
