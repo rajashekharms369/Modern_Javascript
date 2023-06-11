@@ -98,4 +98,42 @@ document.addEventListener("keypress", onKeyPress);
 document.addEventListener("keydown", onKeyDown);
 
 document.addEventListener("keyup", onKeyUp);
+
+window.addEventListener("keydown", (e) => {
+    const insert = document.getElementById("insert");
+
+    insert.innerHTML = 
+    `
+    <div class="key">
+      ${e.key}
+      <small>e.key</small>
+    </div>
+
+    <div class="key">
+      ${e.keyCode}
+      <small>e.keyCode</small>
+    </div>
+
+    <div class="key">
+      ${e.code}
+      <small>e.code</small>
+    </div>
+    `
+})
 */
+
+/* Input Events */
+const itemInput = document.getElementById('item-input');
+
+const priorityInput = document.getElementById("priority-input");
+
+const checkBox = document.getElementById("checkbox");
+
+const heading = document.querySelector("h1");
+
+itemInput.addEventListener("input", onImput);
+
+function onImput(e){
+    // console.log("Hello world");
+    console.log(e.target.value);
+}
