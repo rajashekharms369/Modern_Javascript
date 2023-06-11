@@ -52,7 +52,7 @@ const firstItem = document.querySelector("li:first-child");
 insertAfter(li, firstItem);
 */
 
-
+/*
 function replaceFirstItem(){
     const firstItem = document.querySelector("li:first-child");
 
@@ -81,3 +81,24 @@ function replaceAllItems(){
 replaceFirstItem();
 replaceSecondItem();
 replaceAllItems();
+
+ */
+
+
+
+/* DOM removing elements
+ */
+
+function removeClearButton(){
+    document.querySelector("#clear").remove();
+}
+
+function removeFirstItem(){
+    const ul = document.querySelector("ul");
+
+    const li = document.querySelector("li:first-child");
+
+    ul.removeChild(li);
+}
+removeClearButton();
+removeFirstItem();
