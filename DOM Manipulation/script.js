@@ -38,3 +38,46 @@ function insertHTML(){
 }
 insertHTML();
 */
+
+/* 
+// Custom InsertAfter function
+function insertAfter(newEl, existingEl){
+    console.log(existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling));
+}
+
+const li = document.createElement("li");
+li.textContent = "Insert me after";
+const firstItem = document.querySelector("li:first-child");
+
+insertAfter(li, firstItem);
+*/
+
+
+function replaceFirstItem(){
+    const firstItem = document.querySelector("li:first-child");
+
+    const li = document.createElement('li');
+    li.textContent = "Replaced first";
+
+    firstItem.replaceWith(li);
+}
+
+function replaceSecondItem(){
+    const secondItem = document.querySelector("li:nth-child(2)");
+
+    const li = document.createElement('li');
+    li.textContent = "Replaced Second";
+
+    secondItem.replaceWith(li);
+}
+
+function replaceAllItems(){
+    const lis = document.querySelectorAll("li");
+    lis.forEach((item, index)=>{
+        item.innerHTML = "Replace All";
+    })
+}
+
+replaceFirstItem();
+replaceSecondItem();
+replaceAllItems();
