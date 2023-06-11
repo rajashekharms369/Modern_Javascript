@@ -87,7 +87,7 @@ replaceAllItems();
 
 
 /* DOM removing elements
- */
+
 
 function removeClearButton(){
     document.querySelector("#clear").remove();
@@ -102,3 +102,19 @@ function removeFirstItem(){
 }
 removeClearButton();
 removeFirstItem();
+ */
+
+
+/* Styling css through Javascript
+const text = document.querySelector('p');
+const itemList = document.querySelector(".item-list");
+
+const items =  itemList.querySelectorAll("li");
+
+document.querySelector("button").onclick = run;
+
+function run(){
+    console.log(1);
+}
+ */
+
