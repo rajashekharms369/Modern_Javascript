@@ -141,10 +141,11 @@ function onImput(e){
 
 
 
-/* Form Submission */
+/* Form Submission 
 const form = document.getElementById("item-form");
 
 function onSubmit(e){
+
     e.preventDefault();
 
     const item = document.getElementById("item-input").value;
@@ -161,3 +162,17 @@ function onSubmit(e){
 }
 
 form.addEventListener("submit", onSubmit);
+*/
+
+/* Event Bubbling */
+const button = document.querySelector("form button");
+
+const div = document.querySelector("form div:nth-child(1)");
+
+div.addEventListener("click", () => {
+    alert("Div was clicked");
+})
+
+button.addEventListener("click", ()=>{
+    alert("The button was clicked");
+});
