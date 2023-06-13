@@ -146,9 +146,18 @@ const form = document.getElementById("item-form");
 
 function onSubmit(e){
     e.preventDefault();
-    const item = document.getElementById("item-input");
-    const priority = document.getElementById("priority-input");
-    console.log(item.value, priority.value);
+
+    const item = document.getElementById("item-input").value;
+
+    const priority = document.getElementById("priority-input").value;
+
+    if(item === "" || priority === 0){
+        alert("Please Enter the fields");
+        return;
+    }
+
+    console.log(item, priority);
+
 }
 
 form.addEventListener("submit", onSubmit);
