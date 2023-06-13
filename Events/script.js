@@ -122,7 +122,7 @@ window.addEventListener("keydown", (e) => {
 })
 */
 
-/* Input Events */
+/* Input Events 
 const itemInput = document.getElementById('item-input');
 
 const priorityInput = document.getElementById("priority-input");
@@ -137,3 +137,18 @@ function onImput(e){
     // console.log("Hello world");
     console.log(e.target.value);
 }
+*/
+
+
+
+/* Form Submission */
+const form = document.getElementById("item-form");
+
+function onSubmit(e){
+    e.preventDefault();
+    const item = document.getElementById("item-input");
+    const priority = document.getElementById("priority-input");
+    console.log(item.value, priority.value);
+}
+
+form.addEventListener("submit", onSubmit);
