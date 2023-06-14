@@ -178,11 +178,33 @@ button.addEventListener("click", ()=>{
 });
 */
 
-/* Event Delegation and multiple events */
+/* Event Delegation and multiple events 
 const listItems = document.querySelectorAll("li");
 
 listItems.forEach((item)=>{
     item.addEventListener("click", (e)=>{
         e.target.remove();
     })
+})
+*/
+
+/* Page Loading and window events */
+// window.onload = () => {
+//     document.querySelector("h1").innerText = "Hello world";
+// }
+
+window.addEventListener("load", ()=>{
+    document.querySelector("h1").textContent = "Hello World";
+})
+
+window.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector("h1").textContent = "Hello World";
+})
+
+window.addEventListener("resize", ()=>{
+    document.querySelector("h1").innerText = `Resize to ${window.innerWidth} x ${window.innerHeight}`;
+})
+
+window.addEventListener('scroll', ()=>{
+    console.log(`Scrolled: ${scrollX} X ${scrollY}`);
 })
