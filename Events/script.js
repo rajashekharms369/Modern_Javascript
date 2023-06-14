@@ -164,7 +164,7 @@ function onSubmit(e){
 form.addEventListener("submit", onSubmit);
 */
 
-/* Event Bubbling */
+/* Event Bubbling 
 const button = document.querySelector("form button");
 
 const div = document.querySelector("form div:nth-child(1)");
@@ -176,3 +176,13 @@ div.addEventListener("click", () => {
 button.addEventListener("click", ()=>{
     alert("The button was clicked");
 });
+*/
+
+/* Event Delegation and multiple events */
+const listItems = document.querySelectorAll("li");
+
+listItems.forEach((item)=>{
+    item.addEventListener("click", (e)=>{
+        e.target.remove();
+    })
+})
