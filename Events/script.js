@@ -188,7 +188,7 @@ listItems.forEach((item)=>{
 })
 */
 
-/* Page Loading and window events */
+/* Page Loading and window events 
 // window.onload = () => {
 //     document.querySelector("h1").innerText = "Hello world";
 // }
@@ -208,3 +208,21 @@ window.addEventListener("resize", ()=>{
 window.addEventListener('scroll', ()=>{
     console.log(`Scrolled: ${scrollX} X ${scrollY}`);
 })
+*/
+
+/* Submit form project */
+const itemForm = document.getElementById("item-form");
+const itemInput = document.getElementById("item-input");
+const itemList = document.getElementById("item-list");
+
+function addItem(e){
+    e.preventDefault();
+    if(itemInput.value===""){
+        alert("Please add an item");
+        return;
+    }
+
+    console.log("Success");
+}
+
+itemForm.addEventListener("submit", addItem);
