@@ -210,7 +210,7 @@ window.addEventListener('scroll', ()=>{
 })
 */
 
-/* Submit form project */
+/* Submit form project 
 const itemForm = document.getElementById("item-form");
 const itemInput = document.getElementById("item-input");
 const itemList = document.getElementById("item-list");
@@ -226,3 +226,13 @@ function addItem(e){
 }
 
 itemForm.addEventListener("submit", addItem);
+*/
+
+function removeItem(e){
+    if(e.target.parentElement.classList.contains("remove-item")){
+        e.target.parentElement.parentElement.remove();
+        console.log("click");
+    }
+}
+
+document.addEventListener("click", removeItem);
