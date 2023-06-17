@@ -236,3 +236,4 @@ function removeItem(e){
 }
 
 document.addEventListener("click", removeItem);
+console.log("Hello world");
