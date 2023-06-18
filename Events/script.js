@@ -226,7 +226,7 @@ function addItem(e){
 }
 
 itemForm.addEventListener("submit", addItem);
-*/
+
 
 function removeItem(e){
     if(e.target.parentElement.classList.contains("remove-item")){
@@ -237,3 +237,5 @@ function removeItem(e){
 
 document.addEventListener("click", removeItem);
 console.log("Hello world");
+
+*/
