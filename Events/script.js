@@ -239,3 +239,6 @@ document.addEventListener("click", removeItem);
 console.log("Hello world");
 
 */
+function checkUI(){
+    console.log("Hello world");
+}
