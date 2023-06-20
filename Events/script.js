@@ -240,5 +240,5 @@ console.log("Hello world");
 
 */
 function checkUI(){
-    console.log("Hello world");
+    console.log("Hello worl");
 }
