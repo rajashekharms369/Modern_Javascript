@@ -239,6 +239,11 @@ document.addEventListener("click", removeItem);
 console.log("Hello world");
 
 */
+const item = document.querySelectorAll("li");
+const itemFilter = document.getElementById("filter");
 function checkUI(){
-    console.log("Hello worl");
+    if(item.length==0){
+        clearBtn.style.display = "none";
+        itemFilter.style.display = "none";
+    }
 }
