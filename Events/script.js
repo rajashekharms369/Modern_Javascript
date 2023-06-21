@@ -252,3 +252,15 @@ console.log("Hello world");
 localStorage.setItem("name","brad");
 console.log(localStorage.getItem("name"));
 localStorage.clear();
+
+function clearItems(){
+    while(itemList.firstChild){
+        itemList.removeChild(itemList.firstChild);
+    }
+}
+
+function removeItemFromStorage(item){
+    const itemFromStorage = getItemsFromStorage();
+    itemsFromStorage = itemsFromStorage.filter((i)=> i !== item);
+    localStorage.setItem("items", JSON.stringify(itemFromStorage));
+}
