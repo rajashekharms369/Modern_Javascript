@@ -239,11 +239,16 @@ document.addEventListener("click", removeItem);
 console.log("Hello world");
 
 */
-const item = document.querySelectorAll("li");
-const itemFilter = document.getElementById("filter");
-function checkUI(){
-    if(item.length==0){
-        clearBtn.style.display = "none";
-        itemFilter.style.display = "none";
-    }
-}
+// const item = document.querySelectorAll("li");
+// const itemFilter = document.getElementById("filter");
+// function checkUI(){
+//     if(item.length==0){
+//         clearBtn.style.display = "none";
+//         itemFilter.style.display = "none";
+//     }
+// }
+
+/*Localstorage and session storage */
+localStorage.setItem("name","brad");
+console.log(localStorage.getItem("name"));
+localStorage.clear();
