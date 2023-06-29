@@ -1,7 +1,9 @@
-function changeText(){
-    document.querySelector("h1").textContent = "hello form callback";
+const intervalId = setInterval(() => {
+    console.log(Date.now());
+}, 1000);
+
+function stopChange(){
+    clearInterval(intervalId);
 }
 
-const timerId = setTimeout(changeText, 4000);
-
-timerId();
+document.getElementById("stop").addEventListener("click", stopChange);
