@@ -7,4 +7,3 @@ function stopChange(){
 }
 
 document.getElementById("stop").addEventListener("click", stopChange);
-console.log("hello world");
