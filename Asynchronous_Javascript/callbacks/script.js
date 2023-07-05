@@ -20,4 +20,3 @@ function getPosts(){
 }
 
 getPosts();
-console.log("Hello world");
