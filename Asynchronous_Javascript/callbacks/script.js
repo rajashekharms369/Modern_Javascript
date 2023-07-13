@@ -21,4 +21,3 @@ function getPosts(){
 
 getPosts();
 console.log("Hello world");
-console.log("It is wednesday");
