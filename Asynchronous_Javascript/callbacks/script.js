@@ -20,5 +20,5 @@ function getPosts(){
 }
 
 getPosts();
-console.log("Hello world");
-console.log("Avengers");
+
+const jsonString = '{"name":"John Doe", "age":30, "city":"New York"}';
