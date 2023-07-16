@@ -1,6 +1,6 @@
 const xhr = new XMLHttpRequest();
 
-xhr.open("GET", "https://api.github.com/users/bradtraversy/repos");
+xhr.open("GET", "https://api.github.com/users/bradtraversy/repos        ");
 
 // readystate has 5 possible values
 // 0. Request Not Initialised
