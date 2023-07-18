@@ -1,12 +1,16 @@
-const promise = new Promise((resolve, reject) => {
-    setTimeout(()=>{
-        console.log("Async task completed");
-        resolve();
+const promise = new Promise((resolve, reject)=>{
+    setTimeout(() => {
+        let error = false;
+        if(!error){
+            resolve({name:"John", age:33})
+        }else{
+            reject("Error: Something went wrong");
+        }
     }, 1000);
-})
+});
 
-promise.then(()=>{
-    console.log("Promise consumed");
-})
-
-console.log("Hello from global scope");
+promise
+    .then((user)=>{
+        console.log(user);
+    })
+    .catch((error)=>console.log(error));
