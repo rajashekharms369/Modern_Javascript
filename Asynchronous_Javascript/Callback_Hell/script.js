@@ -16,5 +16,3 @@ promise
     .catch((error)=>console.log(error));
     console.log("Hello world");
     console.log("Hello world");
-    console.log("Hello world");
-    console.log("Hello world");
