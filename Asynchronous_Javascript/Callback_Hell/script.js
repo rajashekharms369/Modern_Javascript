@@ -13,4 +13,12 @@ promise
     .then((user)=>{
         console.log(user);
     })
-    .catch((error)=>console.log(error));
+    .then((name)=>{
+        console.log(name);
+        return name.length;
+    })
+    .then((nameLength)=>{
+        console.log(nameLength);
+    })
+    .catch((error)=>console.log(error))
+    .then(()=>console.log("This will run no matter what"));
