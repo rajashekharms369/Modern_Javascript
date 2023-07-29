@@ -22,3 +22,4 @@ promise
     })
     .catch((error)=>console.log(error))
     .then(()=>console.log("This will run no matter what"));
+console.log("Hellow world");
