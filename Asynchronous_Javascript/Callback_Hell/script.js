@@ -23,18 +23,26 @@
 //     .catch((error)=>console.log(error))
 //     .then(()=>console.log("This will run no matter what"));
 
-function resolveAfter2Seconds(){
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve("resolved");
-        },2000);
-    });
-}
+// function resolveAfter2Seconds(){
+//     return new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve("resolved");
+//         },2000);
+//     });
+// }
 
-async function asyncCall(){
-    console.log("calling");
-    const result = await resolveAfter2Seconds();
-    console.log(result);
-}
+// async function asyncCall(){
+//     console.log("calling");
+//     const result = await resolveAfter2Seconds();
+//     console.log(result);
+// }
 
-asyncCall();
+// asyncCall();
+
+// Fetching a json file
+fetch("./movies.json").then((response)=>{
+    return response.json();
+}).then((data)=>{
+    console.log(data);
+});
+
