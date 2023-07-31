@@ -50,3 +50,11 @@ fetch("./movies.json").then((response)=>{
 fetch("./test.txt")
     .then((response)=>response.text())
     .then((data)=>console.log(data));
+
+// fetching data from github
+
+const data = fetch("https://api.github.com/users/rajashekharms369/repos")
+    .then((response)=>response.json())
+    .then((data)=>console.log(data));
+
+console.log("Hello worold");
