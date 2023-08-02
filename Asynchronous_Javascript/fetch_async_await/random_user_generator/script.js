@@ -55,3 +55,4 @@ function fetchUser() {
   document.querySelector('#generate').addEventListener('click', fetchUser);
   
   fetchUser();
+  console.log("Hello world");
