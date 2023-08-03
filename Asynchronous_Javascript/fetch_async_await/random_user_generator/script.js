@@ -56,3 +56,4 @@ function fetchUser() {
   
   fetchUser();
   console.log("Hello world");
+  console.log("Hello world");
