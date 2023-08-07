@@ -33,8 +33,25 @@ const addToDoDom = (todo) => {
     }
 
     document.getElementById("todo-list").appendChild(div);
+};
+
+const init = () => {
+    document.addEventListener("DOMContentLoaded", getTodos);
+    document.querySelector("#todo-form").addEventListener("submit",createTodo);
 }
 
-getTodos();
+    const createTodo = (e) => {
+        try{
+            e.preventDefault();
+            console.log("1");
+        }
+        catch{
+            console.log("Some shit went wrong");
+        }
+        e.preventDefault();
+    }
+
+// getTodos();
+init();
 
 console.log("hello world");
