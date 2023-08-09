@@ -72,4 +72,9 @@ const createTodo = (e) => {
 init();
 
 console.log("hello world");
-console.log("Hello world");
+
+async function postData(url = "", Data = {}){
+    const response = await fetch(url,   {
+
+    })
+}
