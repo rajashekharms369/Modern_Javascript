@@ -73,3 +73,4 @@ const getUsers = async () =>{
 };
 
 getUsers();
+console.log("Hello world");
