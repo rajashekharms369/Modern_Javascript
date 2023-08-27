@@ -24,3 +24,4 @@ function clock(){
     console.log("Hello world");
 };
 clock();
+console.log("Hello world");
