@@ -32,6 +32,3 @@ playBtn.addEventListener('click', () => {
         playSong();
     }
 })
-
-// console.log("hello world");
-// console.log("Hell world");
