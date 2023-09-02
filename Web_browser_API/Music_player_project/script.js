@@ -33,4 +33,3 @@ playBtn.addEventListener('click', () => {
     }
 })
 console.log("Hello world");
-console.log("Hello world");
