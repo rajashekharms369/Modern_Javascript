@@ -24,6 +24,13 @@ function loadSong(song){
     audio.src = `album_images/${song}.jpg`;
 }
 
+function playSong(){
+    musicContainer.classList.add("play");
+    playBtn.querySelector("fas").classList.remove("fa-play");
+    playBtn.querySelector("fas").classList.add("fa-pause");
+    audio.play()
+}
+
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains("play");
     if(isPlaying){
