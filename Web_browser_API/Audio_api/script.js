@@ -26,4 +26,3 @@ audio.addEventListener("timeupdate", () => {
 volume.addEventListener('change', ()=>{
     audio.volume = volume.value;
 })
-console.log("Hello world");
