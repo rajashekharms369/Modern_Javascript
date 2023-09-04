@@ -16,3 +16,4 @@ stop.addEventListener("click", ()=>{
     video.pause();
     video.currentTime = 0;
 })
+console.log("Hello world");
