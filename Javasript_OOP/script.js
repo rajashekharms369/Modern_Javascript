@@ -5,3 +5,4 @@
     };
 
     console.log(rectangle.name);
+    console.log("Hello world");
