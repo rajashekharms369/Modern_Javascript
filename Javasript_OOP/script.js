@@ -1,22 +1,14 @@
-class Shape{
-    constructor(name){
-        this.name = name;
-    }
-
-    logName(){
-        console.log(this.name);
-    }
-}
-
-class Rectangle extends Shape{
+class Rectangle{
     constructor(name, width, height){
-        super(name);
+        this.name = name;
         this.width = width;
         this.height = height;
     }
+
+    area(){
+        return this.height*this.width;
+    }
 }
 
-const rect = new Rectangle("Rect 1", 20, 20);
-console.log("Hello world");
-rect.logName();
-console.log("Good morning");
+const rect = new Rectangle("Rect 1", 2, 3);
+console.log(rect.area());
