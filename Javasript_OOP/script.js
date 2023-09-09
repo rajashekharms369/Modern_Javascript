@@ -1,14 +1,12 @@
-class Rectangle{
-    constructor(name, width, height){
-        this.name = name;
-        this.width = width;
-        this.height = height;
+class App{
+    constructor(){
+        this.serverName = "localhost";
     }
 
-    area(){
-        return this.height*this.width;
+    getServerName(){
+        console.log(this.serverName);
     }
 }
 
-const rect = new Rectangle("Rect 1", 2, 3);
-console.log(rect.area());
+const app = new App();
+app.getServerName();
