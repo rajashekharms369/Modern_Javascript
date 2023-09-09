@@ -1,14 +1,16 @@
-class App{
-    constructor(){
-        this.serverName = "localhost";
-    }
+// class App{
+//     constructor(){
+//         this.serverName = "localhost";
+//         document
+//             .querySelector("button")
+//             .addEventListener("click", this.getServerName.bind(this));
+//     }
 
-    getServerName(){
-        console.log(this.serverName);
-    }
-}
+//     getServerName(){
+//         console.log(this.serverName);
+//     }
+// }
 
-const app = new App();
+// const app = new App();
 
-app.getServerName();
 
