@@ -137,34 +137,58 @@ function Person(firstName, lastName){
 // console.log(rect);
 // console.log(rect.area());
 
-const rectanglePrototypes = {
-    area: function(){
-        return this.width*this.height;
-    },
-    perimeter: function(){
-        return 2*(this.width+this.height);
-    },
-    isSquare: function(){
-        return this.height === this.width;
-    }
+// const rectanglePrototypes = {
+//     area: function(){
+//         return this.width*this.height;
+//     },
+//     perimeter: function(){
+//         return 2*(this.width+this.height);
+//     },
+//     isSquare: function(){
+//         return this.height === this.width;
+//     }
+// }
+
+
+// function createRectangle(height, width){
+//     return Object.create(rectanglePrototypes,{
+//         height: {
+//             value: height
+//         },
+//         width:{
+//             value: width
+//         },
+//     });
+// }
+
+
+// const rect = createRectangle(10, 10);
+// console.log(rect);
+// console.log(rect.area());
+
+// const rect2 = createRectangle(10, 20);
+// console.log(rect2);
+
+
+function Shape(){
+    this.name = name;
+}
+
+function Rectangle(name, width, height){
+    Shape.call(this, name);
+
+    this.height = height;
+    this.width = width;
 }
 
 
-function createRectangle(height, width){
-    return Object.create(rectanglePrototypes,{
-        height: {
-            value: height
-        },
-        width:{
-            value: width
-        },
-    });
+function Circle(name, radius){
+    Shape.call(this, name);
+    this.radius = radius;
 }
 
 
-const rect = createRectangle(10, 10);
+const rect = new Rectangle("Rectangle 1", 20, 30);
+const cir = new Circle("Circle 1", 30);
 console.log(rect);
-console.log(rect.area());
-
-const rect2 = createRectangle(10, 20);
-console.log(rect2);
+console.log(cir);
