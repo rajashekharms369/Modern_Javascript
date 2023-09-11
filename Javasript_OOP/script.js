@@ -122,14 +122,19 @@ function Person(firstName, lastName){
 
 
 // Prototype
-function Rectangle(name, width, height){
-    this.name = name;
-    this.width = width;
-    this.height = height;
-    this.area = function(){
-        return this.width*this.height;
-    }
-}
+// function Rectangle(name, width, height){
+//     this.name = name;
+//     this.width = width;
+//     this.height = height;
+// }
 
-const rect = new Rectangle("Rect", 10, 10);
-console.log(Object.getPrototypeOf(rect))
+// Rectangle.prototype.area = function (){
+//     return this.height*this.width;
+// }
+
+// const rect = new Rectangle("Rect", 10, 10);
+
+// console.log(rect);
+// console.log(rect.area());
+
+
