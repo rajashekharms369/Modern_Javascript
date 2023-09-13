@@ -54,3 +54,4 @@ const wallet = new Wallet();
 wallet.deposit(300);
 wallet.withdraw(299);
 console.log(wallet.balance);
+console.log("Hello world");
