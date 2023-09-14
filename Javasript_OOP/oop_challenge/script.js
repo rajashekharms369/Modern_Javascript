@@ -73,13 +73,17 @@ const rect = {
     height:"10"
 }
 
-const desc1 = Object.getOwnPropertyDescriptor(rect, "name");
-console.log(desc1);
-
 
 Object.defineProperty(rect, "name",{
     writable:false,
     configurable:false,
     enumerable:false
 });
+
+const desc1 = Object.getOwnPropertyDescriptor(rect, "name");
+
 console.log(desc1);
+
+rect.name = "Raj";
+
+console.log(rect);
