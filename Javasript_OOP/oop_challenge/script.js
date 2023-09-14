@@ -57,3 +57,29 @@ console.log(wallet.balance);
 console.log("Hello world");
 Math.PI = 44;
 console.log(Math.PI);
+
+// [[Configurable]] - If 'true', the property can be deleted and these attributes can be modified, otherwise not
+// [[Enumerable]] - If 'true', the property will be returned in a 'for...in' loop, ohterwise not.
+// [[Writeable]] - If 'true', the value of the property can be changed, otherwise not.
+// [[Value]] - It represents the value of the property.
+
+
+let desc = Object.getOwnPropertyDescriptor(Math, "PI");
+console.log(desc);
+
+const rect = {
+    name:"Rectangle 1",
+    width:"120",
+    height:"10"
+}
+
+const desc1 = Object.getOwnPropertyDescriptor(rect, "name");
+console.log(desc1);
+
+
+Object.defineProperty(rect, "name",{
+    writable:false,
+    configurable:false,
+    enumerable:false
+});
+console.log(desc1);
