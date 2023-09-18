@@ -64,26 +64,60 @@ console.log(Math.PI);
 // [[Value]] - It represents the value of the property.
 
 
-let desc = Object.getOwnPropertyDescriptor(Math, "PI");
-console.log(desc);
+// let desc = Object.getOwnPropertyDescriptor(Math, "PI");
+// console.log(desc);
 
-const rect = {
+// const rect = {
+//     name:"Rectangle 1",
+//     width:"120",
+//     height:"10"
+// }
+
+
+// Object.defineProperty(rect, "name",{
+//     writable:false,
+//     configurable:false,
+//     enumerable:false
+// });
+
+// const desc1 = Object.getOwnPropertyDescriptor(rect, "name");
+
+// console.log(desc1);
+
+// rect.name = "Raj";
+
+// console.log(rect);
+
+// for(let [key, value] of Object.entries(rect)){
+//     console.log(key+" "+value);
+// }
+
+
+
+// Sealing: Prevents properties from adding or removing. Can still be changed.
+// Freezing: Prevents properties from being added, removed or changed.
+
+const rectObj = {
     name:"Rectangle 1",
-    width:"120",
-    height:"10"
+    width:10,
+    height:10
 }
 
+Object.seal(rectObj);
 
-Object.defineProperty(rect, "name",{
-    writable:false,
-    configurable:false,
-    enumerable:false
-});
+let desc = Object.getOwnPropertyDescriptor(rectObj);
 
-const desc1 = Object.getOwnPropertyDescriptor(rect, "name");
+rectObj.color = "red";
 
-console.log(desc1);
+delete rectObj.width;
 
-rect.name = "Raj";
+console.log(rectObj);
 
-console.log(rect);
+
+const circleObj = {
+    name: "Circle 1",
+    radius: 30
+}
+
+Object.freeze(circleObj);
+
