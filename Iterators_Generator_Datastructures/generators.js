@@ -9,4 +9,4 @@ const iterator =  createTeamIterator(teams);
 
 for(const team of teams){
     console.log(team);
-}
+} 
