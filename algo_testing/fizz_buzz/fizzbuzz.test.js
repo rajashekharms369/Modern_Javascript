@@ -11,4 +11,5 @@ describe('fizzbuzz', () => {
         expect(fizzbuzz(17)).toEqual(17);
     });
 
-}); 
+});
+console.log("Hello world")
