@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hey this is my first full stack app</h1>
+    <h2>My name is: <span id="name"></span></h2>
+    
+</body>
+<script>
+    var name = document.getElementById("name");
+
+    let str;
+    async function fe(){
+        str = await fetch('http://localhost:8080/name')
+        .then(response => response.text());
+        document.getElementById("name").innerText = str;
+    }
+    fe();
+
+</script>
+</html>
