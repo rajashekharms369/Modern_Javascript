@@ -7,20 +7,20 @@
 </head>
 <body>
     
-    <form name="myForm" onsubmit="validateForm()" method="post">
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
         Name: <input type="text" name="fname">
-        <input type="submit" value="Subimit">
-    </form>
+        <input type="submit" value="Submit">
+      </form>
 
 
     <script>
-        function validateForm(){
-            let x = document.forms["myform"]["fname"].value;
-            if(x==""){
-                alert("Name must be filletd out");
-                return false;
-            }
-        }
+        function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
     </script>
 </body>
 </html>
