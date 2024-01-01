@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Header -->
+    <head>
+        <h1>This is a header</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas qui laboriosam consequatur nostrum aperiam sint? Provident voluptatem sunt dolor facilis ab aliquam sed, cum veniam eveniet vel porro optio, neque nobis a asperiores. Nihil dolor cum reprehenderit dignissimos enim. Magni laboriosam ratione temporibus rem dolorem quaerat tempore dolores error incidunt.</p>
+    </head>
+
+    <!-- page content -->
+    <main>
+        <article>
+            <label for="username">Username: </label>
+            <input type="text" id="username">
+        </article>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script>
+        var userInput = document.getElementById('username');
+        userInput.addEventListener("focus", function (){
+            console.log("The input field has gained focus.");
+        })
+    </script>
+</body>
+</html>
