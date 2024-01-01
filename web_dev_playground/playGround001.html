@@ -20,12 +20,16 @@
         </article>
 
         <article>
+            <!-- Dummy form -->
             <form onsubmit="return validateForm()" action="#" method="post" name="myform">
                 <label for="fname" form="myform">Firstname</label>
-                <input type="text" name="fname">
+                <input id="fname" type="text" name="fname">
 
                 <input type="submit" value="Submit">
             </form>
+
+
+            <!--  -->
         </article>
     </main>
 
@@ -38,6 +42,17 @@
         userInput.addEventListener("focus", function (){
             console.log("The input field has gained focus.");
         })
+
+        
+
+
+        function validateForm(){
+            let x = document.forms["myform"]["fname"].value;
+            if(x==""){
+                alert("The input field cannot be empty");
+                return false;
+            }
+        }
     </script>
 </body>
 </html>
