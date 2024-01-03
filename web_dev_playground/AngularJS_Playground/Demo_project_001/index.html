@@ -8,13 +8,158 @@
 </head>
 <body>
     
-    <div class="app" ng-app="">
+    <!-- <p>Try to change the names</p>
 
-        <p>Input the input</p>
-        <p>Name: <input type="text" name="name" ng-model="name"></p>
-        <p ng-bind="name"></p>
+    <div class="myApp" ng-app="myApp" ng-controller="myCtrl">
+
+        <p>Firstname: <input type="text" ng-model="firstName"></p>
+        <p>Lastname: <input type="text" ng-model="lastName"></p>
+
+        <p>Full name: {{ firstName +" "+ lastName }}</p>
+    </div> -->
+
+    <!-- <div ng-app="myApp" ng-controller="personCtrl">
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        Full Name : {{ fullName() }}
+    </div> -->
+
+    <!-- <div ng-app="myApp" ng-controller="personCtrl">
+
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{fullName()}}
+        
+    </div> -->
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names">{{x}}</li>
+        </ul>
+    </div> -->
+
+
+    <!-- filters -->
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <p>The name is {{ name | lowercase }}</p>
+    </div> -->
+
+
+    <!-- Adding filters to directives -->
+    <!-- <div ng-app="myApp" ng-controller="namesCtrl">
+        <p>Looping with the objects</p>
+        <ul>
+            <li ng-repeat="x in names | orderBy:'country'">
+                {{ x.name + ", " + x.country }}
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- Currency filter -->
+    <!-- <div ng-app="myApp" ng-controller="namesCtrl">
+        <ul>
+            <li ng-repeat="x in names | filter: 'i'">
+                {{x}}
+            </li>
+        </ul>
+    </div> -->
+
+
+    <!-- <div ng-app="myApp" ng-controller="namesCtrl">
+        <p>Type a letter in the input field</p>
+
+        <p><input type="text" ng-model="test"></p>
+
+        <ul>
+            <li ng-repeat="x in names | filter:test">
+                {{x}}
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- <div ng-app="myApp" ng-controller="namesCtrl">
+        <table border="1" width="100%">
+            <tr>
+                <th ng-click="orderByMe('name')">Name</th>
+                <th ng-click="orderByMe('country')">Country</th>
+            </tr>
+
+            <tr ng-repeat="x in names | orderBy:myOrderBy">
+                <td>{{x.name}}</td>
+                <td>{{x.country }}</td>
+            </tr>
+        </table>
+    </div> -->
+
+    <!-- <ul ng-app="myApp" ng-controller="namesCtrl">
+        <li ng-repeat="x in names">
+            {{ x | myFormat }}
+        </li>
+    </ul> -->
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <p>This head will change after 2 seconds</p>
+        <h1>{{myHeader}}</h1>
+    </div>
+
+    <p>The $timeout service runs a function after a specified number of millisecond</p> -->
+
+    <div ng-app="myApp">
+        Convert the number 255, using a custom made service inside a custom made filter:
+
+        <h1>{{255 | myFormat}}</h1>
 
     </div>
-    
+
+    <script>
+        // var app = angular.module("myApp", []);
+        // app.filter("myFormat", function(){
+        //     return function(x){
+        //         var i, c, txt = "";
+        //         for(i=0; i<x.length; i++){
+        //             c = x[i];
+        //             if(i%2==0){
+        //                 c = c.toUpperCase();
+        //             }
+        //             txt += c;
+        //         }
+        //         return txt;
+        //     };
+        // });
+
+        // app.controller("namesCtrl", function($scope){
+        //     $scope.names = [
+        //         'Jani',
+        //         'Carl',
+        //         'Margareth',
+        //         'Hege',
+        //         'Joe',
+        //         'Gustav',
+        //         'Birgit',
+        //         'Mary',
+        //         'Kai'
+        //     ];
+        // })
+
+        // var app = angular.module("myApp", []);
+        // app.controller("myCtrl", function($scope, $http){
+        //     $http.get("wecome.html").then(function(response){
+        //         $scope.myWelcome = response.data;
+        //     });
+        // });
+
+        // var app = angular.module("myApp", []);
+        // app.controller("myCtrl", function($scope, $timeout){
+        //     $scope.myHeader = "Hello world!";
+        //     $timeout(function(){
+        //         $scope.myHeader = "How are you dong today";
+        //     },2000)
+        // })
+
+        var app = angular.module("myApp", []);
+
+    </script>
+    <!-- <script src="personController.js"></script> -->
 </body>
 </html>
