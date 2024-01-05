@@ -6,3 +6,5 @@ var app = angular.module("myApp", []);
                 return $scope.firstName+" "+$scope.lastName;
             };
         });
+
+console.log("Hello world")
