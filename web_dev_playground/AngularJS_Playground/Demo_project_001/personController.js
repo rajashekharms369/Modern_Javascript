@@ -10,5 +10,3 @@ var app = angular.module("myApp", []);
 console.log("Hello world")
 
 console.log("Hello world");
-
-console.log("Hello world");
