@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>License Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="licenseForm" onsubmit="submitForm(event)">
+    <label for="instanceId">InstanceId:</label>
+    <input type="text" id="instanceId" name="instanceId" required pattern="[a-zA-Z0-9]+">
+
+    <label>Module:</label>
+    <input type="checkbox" name="module" value="1"> Resource Scheduling
+    <input type="checkbox" name="module" value="2"> Financial
+    <input type="checkbox" name="module" value="4"> Timesheet
+    <input type="checkbox" name="module" value="8"> Scheduling_plus
+    <input type="checkbox" name="module" value="16"> Security
+
+    <label for="numResources">No. of Resources:</label>
+    <input type="number" id="numResources" name="numResources" required>
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="date" id="expiryDate" name="expiryDate" required>
+
+    <label for="accountStatus">Account Status:</label>
+    <input type="number" id="accountStatus" name="accountStatus" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <button id="downloadBtn" style="display:none">Download Encrypted Key</button>
+  <script src="script.js"></script>
+</body>
+</html>
