@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#download-btn {
+    display: none;
+    width: 17%;
+}
+
+/* #encryptedKey{
+    display: none;
+} */
+
+/* .dwnld-btn-ctn{
+    display: none;
+} */
+
+/* .dwnld-btn-ctn::after{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+} */
+
+.opt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.opt label{
+    width: 80%;
+}
