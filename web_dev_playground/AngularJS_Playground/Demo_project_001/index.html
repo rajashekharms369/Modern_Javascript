@@ -3,9 +3,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-    <div ng-app="" ng-init="firstname='John'">
-        <p>The name is <input type="text" ng-model="firstname"></p>
-        <p>You wrote: {{firstname}}</p>
+    <div ng-app="" ng-init="names=[
+    {name:'raj', country:'Norwar'},
+    {name:'Hege', country:'sweden'},
+    {name:'Kai', country:'Denmark'}
+    ]">
+        
     </div>  
 
     <script>
