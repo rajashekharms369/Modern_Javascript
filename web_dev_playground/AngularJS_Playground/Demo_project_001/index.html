@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+    </style>
+</head>
 <body>
 
-<div ng-app="myApp" ng-controller="myCtrl">
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names | orderBy:'country'">
+                {{x.name +" "+x.country}}
+            </li>
+        </ul>
+    </div>
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
 
-</div>
-
-
-<script src="angular_playground.js"></script>
-
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope){
+            $scope.names = [
+        {name:'Jani',country:'Norway'},
+        {name:'Carl',country:'Sweden'},
+        {name:'Margareth',country:'England'},
+        {name:'Hege',country:'Norway'},
+        {name:'Joe',country:'Denmark'},
+        {name:'Gustav',country:'Sweden'},
+        {name:'Birgit',country:'Denmark'},
+        {name:'Mary',country:'England'},
+        {name:'Kai',country:'Norway'}
+        ];
+        })
+    </script>
 </body>
 </html>
