@@ -16,27 +16,23 @@
 
     <div ng-app="myApp" ng-controller="myCtrl">
         <ul>
-            <li ng-repeat="x in names | orderBy:'country'">
-                {{x.name +" "+x.country}}
-            </li>
+            <li ng-repeat="x in names | filter : 'i'">{{x}}</li>
         </ul>
     </div>
 
 
     <script>
-        var app = angular.module("myApp", []);
-        app.controller("myCtrl", function($scope){
+        angular.module("myApp", []).controller("myCtrl", function($scope){
             $scope.names = [
-        {name:'Jani',country:'Norway'},
-        {name:'Carl',country:'Sweden'},
-        {name:'Margareth',country:'England'},
-        {name:'Hege',country:'Norway'},
-        {name:'Joe',country:'Denmark'},
-        {name:'Gustav',country:'Sweden'},
-        {name:'Birgit',country:'Denmark'},
-        {name:'Mary',country:'England'},
-        {name:'Kai',country:'Norway'}
-        ];
+                "Jani",
+                "carl",
+                "Margareth",
+                "Hege",
+                "Joe",
+                "Gustavo",
+                "Birgit",
+                "Kai"
+            ]
         })
     </script>
 </body>
